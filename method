@@ -1,0 +1,11 @@
+# установка библиотек
+!pip install objectnat folium matplotlib mapclassify
+from objectnat import get_adj_matrix_gdf_to_gdf, get_intermodal_graph
+import geopandas as gpd
+import pandas as pd
+from shapely.ops import unary_union
+from objectnat import get_service_provision
+
+
+buildings = gpd.read_file('buildings.geojson')
+services = gpd.read_file('service.geojson')
